@@ -17,12 +17,7 @@ class Home extends StatelessWidget {
         child: FractionallySizedBox(
           heightFactor: 0.8,
           widthFactor: 0.65,
-          child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Colors.black,width: 1)
-              ),
-              child: TableMusica()),
+          child: TableMusica(),
         ),
       ),
       bottomNavigationBar: Container(
