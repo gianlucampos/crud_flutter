@@ -12,7 +12,6 @@ class Home extends StatelessWidget {
         title: Text('Crud com Flutter '),
       ),
       body: Container(
-        color: Colors.green,
         padding: EdgeInsets.all(50),
         width: double.infinity,
         child: Column(
