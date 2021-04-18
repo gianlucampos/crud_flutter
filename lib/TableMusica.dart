@@ -11,7 +11,13 @@ class TableMusica extends StatelessWidget {
         title: Text('Músicas'),
         backgroundColor: Colors.blue,
       ),
-      body: TableBody(),
+      body: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.black, width: 1),
+        ),
+        child: TableBody(),
+      ),
     );
   }
 }
@@ -26,9 +32,7 @@ class TableBody extends StatelessWidget {
             Expanded(
               child: DataTable(
                 dividerThickness: 2,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.black, width: 1)),
+                decoration: BoxDecoration(color: Colors.white),
                 columns: [
                   DataColumn(
                       label: Text(
