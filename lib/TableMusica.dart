@@ -162,17 +162,36 @@ class TablePagination extends StatelessWidget {
                   width: 100,
                   height: 35,
                   color: Colors.white70,
-                  child: Text('Anterior'),
+                  child: TextButton(onPressed: () {}, child: Text('Anterior')),
                 ),
                 SizedBox(
                   width: 10,
+                ),
+                Row(
+                  children: List.generate(
+                      5,
+                      (index) => Row(children: [
+                            Container(
+                              alignment: Alignment.center,
+                              height: 35,
+                              width: 35,
+                              color: Colors.white70,
+                              child: TextButton(
+                                  onPressed: () {},
+                                  child: Text((index + 1).toString())),
+                            ),
+                            SizedBox(width: 10),
+                          ])),
                 ),
                 Container(
                   alignment: Alignment.center,
                   width: 100,
                   height: 35,
                   color: Colors.white70,
-                  child: Text('Próximo'),
+                  child: TextButton(
+                    child: Text('Próximo'),
+                    onPressed: () {},
+                  ),
                 ),
               ],
             ),
