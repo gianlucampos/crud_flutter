@@ -12,12 +12,17 @@ class Home extends StatelessWidget {
         title: Text('Crud com Flutter '),
       ),
       body: Container(
-        alignment: Alignment.topCenter,
-        margin: EdgeInsets.all(50),
-        child: FractionallySizedBox(
-          heightFactor: 0.8,
-          widthFactor: 0.65,
-          child: TableMusica(),
+        padding: EdgeInsets.all(50),
+        width: double.infinity,
+        child: Column(
+          children: [
+            Flexible(
+                child: Container(
+              alignment: Alignment.topCenter,
+              width: MediaQuery.of(context).size.width * 0.60,
+              child: TableMusica(),
+            )),
+          ],
         ),
       ),
       bottomNavigationBar: Container(
