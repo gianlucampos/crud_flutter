@@ -13,6 +13,22 @@ class TableMusica extends StatelessWidget {
           AppBar(
             title: Text('Músicas'),
             backgroundColor: Colors.blue,
+            actions: [
+              IconButton(
+                tooltip: 'Adicionar Música',
+                icon: Icon(
+                  FontAwesome5Solid.plus_circle,
+                  color: Colors.grey[400],
+                ),
+                onPressed: () {},
+              ),
+              Center(
+                child: Text(
+                  'Adicionar Música',
+                ),
+              ),
+              SizedBox(width: 20),
+            ],
           ),
           Row(
             children: [
@@ -154,7 +170,10 @@ class TablePagination extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('5 de 25 resultados'),
+            Text(
+              '5 de 25 resultados',
+              textScaleFactor: 1.2,
+            ),
             Row(
               children: [
                 Container(
