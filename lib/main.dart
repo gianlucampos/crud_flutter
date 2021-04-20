@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Home.dart';
-import 'constants/Colors.dart';
+import 'home_page.dart';
+import 'core/app_colors.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: BACKGROUND,
+        primaryColor: AppColors.background,
       ),
-      home: Home(),
+      home: HomePage(),
     );
   }
 }

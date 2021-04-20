@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:webapp/TableMusica.dart';
 
-import 'constants/Colors.dart';
+import 'widgets/table_musica_widget.dart';
+import 'core/app_colors.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        color: BACKGROUND,
+        color: AppColors.background,
         height: 65,
         child: Center(
           child: Text(
