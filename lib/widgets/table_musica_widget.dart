@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:webapp/core/app_colors.dart';
 
 class TableMusica extends StatelessWidget {
   @override
@@ -12,31 +13,23 @@ class TableMusica extends StatelessWidget {
         children: [
           AppBar(
             title: Text('Músicas'),
-            backgroundColor: Colors.blue,
+            backgroundColor: AppColors.blue,
             actions: [
-              IconButton(
-                tooltip: 'Adicionar Música',
+              TextButton.icon(
+                onPressed: () {},
                 icon: Icon(
                   FontAwesome5Solid.plus_circle,
-                  color: Colors.grey[400],
+                  color: AppColors.gray,
                 ),
-                onPressed: () {},
-              ),
-              Center(
-                child: Text(
-                  'Adicionar Música',
+                label: Text(
+                  "Adicionar Música",
+                  style: TextStyle(color: AppColors.white),
                 ),
               ),
               SizedBox(width: 20),
             ],
           ),
-          Row(
-            children: [
-              Expanded(
-                child: TableBody(),
-              ),
-            ],
-          ),
+          TableBody(),
           TablePagination(),
         ]);
   }
