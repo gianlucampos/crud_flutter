@@ -174,58 +174,63 @@ class TablePagination extends StatelessWidget {
               '5 de 25 resultados',
               textScaleFactor: 1.2,
             ),
-            Row(
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width * 0.1,
-                  height: 35,
-                  color: Colors.white70,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: MediaQuery.of(context).size.width > 630
-                        ? Text('Anterior')
-                        : Text('<'),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width * 0.1,
+                    height: 35,
+                    color: Colors.white70,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: MediaQuery.of(context).size.width > 960
+                          ? Text('Anterior')
+                          : Text('<'),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                LayoutBuilder(builder: (context, constraints) {
-                  if (MediaQuery.of(context).size.width > 960) {
-                    return Row(
-                      children: List.generate(
-                          5,
-                          (index) => Row(children: [
-                                Container(
-                                  alignment: Alignment.center,
-                                  height: 35,
-                                  width: 35,
-                                  color: Colors.white70,
-                                  child: TextButton(
-                                      onPressed: () {},
-                                      child: Text((index + 1).toString())),
-                                ),
-                                SizedBox(width: 10),
-                              ])),
-                    );
-                  } else {
-                    return Container();
-                  }
-                }),
-                Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width * 0.1,
-                  height: 35,
-                  color: Colors.white70,
-                  child: TextButton(
-                    child: MediaQuery.of(context).size.width > 630
-                        ? Text('Próximo')
-                        : Text('>'),
-                    onPressed: () {},
+                  SizedBox(
+                    width: 10,
                   ),
-                ),
-              ],
+                  LayoutBuilder(builder: (context, constraints) {
+                    if (MediaQuery.of(context).size.width > 960) {
+                      return Row(
+                        children: List.generate(
+                            5,
+                            (index) => Row(children: [
+                                  Container(
+                                    alignment: Alignment.center,
+                                    height: 35,
+                                    width: 35,
+                                    color: Colors.white70,
+                                    child: TextButton(
+                                        onPressed: () {},
+                                        child: Text((index + 1).toString())),
+                                  ),
+                                  SizedBox(width: 10),
+                                ])),
+                      );
+                    } else {
+                      return Container();
+                    }
+                  }),
+                  Flexible(
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      height: 35,
+                      color: Colors.white70,
+                      child: TextButton(
+                        child: MediaQuery.of(context).size.width > 960
+                            ? Text('Próximo')
+                            : Text('>'),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
